@@ -27,6 +27,8 @@ public class Recipe {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
     private Set<Ingredient> ingredients;
 
+
+
     public Long getId() {
         return id;
     }

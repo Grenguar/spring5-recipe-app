@@ -15,35 +15,46 @@ public class Ingredient {
     @ManyToOne
     private Recipe recipe;
 
-     public Long getId() {
-         return id;
-     }
+    @OneToOne(fetch = FetchType.EAGER)
+    private UnitOfMeasure unitOfMeasure;
 
-     public void setId(Long id) {
-         this.id = id;
-     }
+    public Long getId() {
+     return id;
+    }
 
-     public String getDescription() {
-         return description;
-     }
+    public void setId(Long id) {
+     this.id = id;
+    }
 
-     public void setDescription(String description) {
-         this.description = description;
-     }
+    public String getDescription() {
+     return description;
+    }
 
-     public BigDecimal getAmount() {
-         return amount;
-     }
+    public void setDescription(String description) {
+     this.description = description;
+    }
 
-     public void setAmount(BigDecimal amount) {
-         this.amount = amount;
-     }
+    public BigDecimal getAmount() {
+     return amount;
+    }
 
-     public Recipe getRecipe() {
-         return recipe;
-     }
+    public void setAmount(BigDecimal amount) {
+     this.amount = amount;
+    }
 
-     public void setRecipe(Recipe recipe) {
-         this.recipe = recipe;
-     }
+    public Recipe getRecipe() {
+     return recipe;
+    }
+
+    public void setRecipe(Recipe recipe) {
+     this.recipe = recipe;
+    }
+
+    public UnitOfMeasure getUnitOfMeasure() {
+     return unitOfMeasure;
+    }
+
+    public void setUnitOfMeasure(UnitOfMeasure unitOfMeasure) {
+     this.unitOfMeasure = unitOfMeasure;
+    }
  }
