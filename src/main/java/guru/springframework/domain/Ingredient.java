@@ -12,9 +12,10 @@ public class Ingredient {
     private String description;
     private BigDecimal amount;
 
+    @ManyToOne
     private Recipe recipe;
 
-     public Long getId() { 
+     public Long getId() {
          return id;
      }
 
