@@ -17,6 +17,7 @@ import static org.mockito.Mockito.when;
 
 public class RecipeServiceImplTest {
 
+    @Mock
     RecipeService recipeService;
 
     @Mock
@@ -25,9 +26,7 @@ public class RecipeServiceImplTest {
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
-
         recipeService = new RecipeServiceImpl(recipeRepository);
-
     }
 
     @Test
